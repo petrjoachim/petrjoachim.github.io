@@ -4,26 +4,26 @@ var step_progress = false;
 var step_start_time = 0;
 var steps = [
     // from start be a little patient
-    {dimensions: {x: 50, y: 20, size: 100}, timeout: 5000}, // 1
+    {dimensions: {x: 50, y: 20}, timeout: 5000}, // 1
     // then be patient not
-    {dimensions: {x: 20, y: 50, size: 30}, timeout: 600},   // 2
-    {dimensions: {x: 90, y: 85, size: 90}, timeout: 300},   // 3
+    {dimensions: {x: 20, y: 50}, timeout: 600},   // 2
+    {dimensions: {x: 90, y: 85}, timeout: 300},   // 3
     // after three quick two pretty slow and small
-    {dimensions: {x: 10, y: 10, size: 15}, timeout: 3000},  // 4
-    {dimensions: {x: 80, y: 80, size: 20}, timeout: 2000},  // 5
+    {dimensions: {x: 10, y: 10, 15}, timeout: 3000},  // 4
+    {dimensions: {x: 80, y: 80}, timeout: 2000},  // 5
     // then put some big ones
-    {dimensions: {x: 40, y: 40, size: 150}, timeout: 800},  // 6
-    {dimensions: {x: 20, y: 10, size: 250}, timeout: 700},  // 7
+    {dimensions: {x: 40, y: 40}, timeout: 800},  // 6
+    {dimensions: {x: 20, y: 10}, timeout: 700},  // 7
     // and some small and quick again
-    {dimensions: {x: 90, y: 90, size: 10}, timeout: 3000},  // 8
-    {dimensions: {x: 10, y: 10, size: 20}, timeout: 330},   // 9
-    {dimensions: {x: 60, y: 30, size: 10}, timeout: 500},   // 10
+    {dimensions: {x: 90, y: 90}, timeout: 3000},  // 8
+    {dimensions: {x: 10, y: 10}, timeout: 330},   // 9
+    {dimensions: {x: 60, y: 30}, timeout: 500},   // 10
     // then some good average set
-    {dimensions: {x: 90, y: 10, size: 50}, timeout: 800},   // 11
-    {dimensions: {x: 20, y: 10, size: 40}, timeout: 1000},  // 12
-    {dimensions: {x: 10, y: 50, size: 60}, timeout: 1200},  // 13
-    {dimensions: {x: 50, y: 80, size: 20}, timeout: 400},   // 14
-    {dimensions: {x: 60, y: 30, size: 50}, timeout: 900},   // 15
+    {dimensions: {x: 90, y: 10}, timeout: 800},   // 11
+    {dimensions: {x: 20, y: 10}, timeout: 1000},  // 12
+    {dimensions: {x: 10, y: 50}, timeout: 1200},  // 13
+    {dimensions: {x: 50, y: 80}, timeout: 400},   // 14
+    {dimensions: {x: 60, y: 30}, timeout: 900},   // 15
 ];
 
 var results = $('<ul></ul>');
@@ -122,7 +122,7 @@ function fire_step(){
     }
 }
 
-//render_square({size:100, x: 100, y: 100}, '#ffcc00', 1000)
+//render_square({x: 100, y: 100}, '#ffcc00', 1000)
 // by default place a red circle
 function render_square(dimensions, colors){
     var speed = 500;
@@ -130,8 +130,8 @@ function render_square(dimensions, colors){
     var body = $('body');
     var square = $('<div></div>').addClass('square');
     body.append(square);
-    square.css('width', dimensions.size);
-    square.css('height', dimensions.size);
+    square.css('width', 50);
+    square.css('height', 50);
     square.css('background-color', colors.from);
     square.css('top', '' + dimensions.y + '%');
     square.css('left', '' + dimensions.x + '%');
