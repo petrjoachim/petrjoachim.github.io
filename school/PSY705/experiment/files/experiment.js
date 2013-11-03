@@ -9,7 +9,7 @@ var steps = [
     {dimensions: {x: 20, y: 50}, timeout: 600},   // 2
     {dimensions: {x: 90, y: 85}, timeout: 300},   // 3
     // after three quick two pretty slow and small
-    {dimensions: {x: 10, y: 10, 15}, timeout: 3000},  // 4
+    {dimensions: {x: 10, y: 10}, timeout: 3000},  // 4
     {dimensions: {x: 80, y: 80}, timeout: 2000},  // 5
     // then put some big ones
     {dimensions: {x: 40, y: 40}, timeout: 800},  // 6
