@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Domácí úkol</title>
+	
+	<style>
+        * {margin: 0; padding: 0;}
+		.wrap {
+			width: 100%;
+			max-width: 500px;
+			margin: 0 auto;
+		}
+        #game {
+            width: 410px;
+            height: 410px;
+        }
+        .pad {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 80px;
+        }
+        .empty {
+            background-color: black;
+        }
+	</style>
+	
+	<script src="js/lib/jak.js"></script>
+	<script src="js/myCoolApp.js"></script>
+	<script>
+		// zapnuti vypisu do konzole
+		console.DEBUG = true;
+	</script>
+</head>
+<body>
+	<div class="wrap">
+        <h1>Sort it!<button id="shuffle">shufle it</button></h1>
+        <div id="game"></div>
+	</div>
+</body>
+</html>
