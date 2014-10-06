@@ -48,6 +48,7 @@ pre code { display: block; }
 .italic { font-style: italic; }
 #title { margin-top: 3em; margin-bottom: 5em; }
 #title h1 { margin-bottom: 0.2em; }
+#title h2 { font-weight: 400}
 
 .article-container { border-bottom: 1px solid #ddd; margin-bottom: 1em; }
 .article-container.last { border-bottom: none; }
