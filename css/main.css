@@ -10,12 +10,12 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body { font:1em/1.625em Georgia, serif; background-color: white; font-size-adjust:none;
   font-style:normal; font-variant:normal; font-weight:normal; }
 
-p { padding:0 0  1.8125em 0; font-weight:400; font-size: 1.0em;}
+p { padding:0 0  1.8125em 0; font-weight:400; font-size: 1.0em; text-align: justify;}
 
 h1, h2 { font-family: Helvetica, arial, sans-serif; font-weight: bold}
 h3,h4,h5,h6 { font-weight: 200;}
 h1 { font-size: 4.0em; margin-bottom: 0.765em; }
-h2 { font-size: 2.0em;  margin-bottom: 0.855em; }
+h2 { font-size: 2.0em;  margin-bottom: 0.855em; text-align: right;}
 h3 { font-size: 1.2em;  margin-bottom: 0.956em; }
 h4 { font-size: 1.1em;  margin-bottom: 1.161em; }
 h5,h6 { font-size: 1.05em;  margin-bottom: 1.238em; }
@@ -46,7 +46,7 @@ pre code { display: block; }
 .cleaner { clear: both; height: 0; }
 .small { font-size: 0.85em; }
 .italic { font-style: italic; }
-#title { margin-top: 3em; margin-bottom: 5em; }
+#title { margin-top: 2em; margin-bottom: 5em; }
 #title h1 { margin-bottom: 0.2em; }
 #title h2 { font-weight: 400}
 
@@ -57,6 +57,7 @@ pre code { display: block; }
 
 #footer{ border-top: 1px solid #ddd; color: #888; }
 #footer a, #footer a:visited { color: #333; }
+.meta {text-align: right; font-style: italic; margin-top: -1em}
 
 
 .date_stamp { text-align: right; }
