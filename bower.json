@@ -1,0 +1,21 @@
+{
+  "name": "petrjoachim.github.io",
+  "version": "0.1.0",
+  "homepage": "http://petr.joachim.cz",
+  "authors": [
+    "Petr Joachim <petr@joachim.cz>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "fontawesome": "~4.3.0"
+  }
+}
