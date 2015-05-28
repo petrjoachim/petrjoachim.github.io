@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title:  "Princip &#34;good enough&#34;"
 date:   2013-03-07 12:00:00
 ---

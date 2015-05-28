@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title:  "Lovci lebek. Headhunteři. Lovci tlam."
 date:   2012-04-03 12:00:00
 ---

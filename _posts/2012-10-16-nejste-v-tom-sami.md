@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title:  "Nejste v tom sami"
 date:   2012-10-16 12:00:00
 ---

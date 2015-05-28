@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title:  "Životní jarní úklid"
 date:   2013-03-27 12:00:00
 ---

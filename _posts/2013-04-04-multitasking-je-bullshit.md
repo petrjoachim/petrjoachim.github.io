@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title:  "Multitasking je bullshit"
 date:   2013-04-04 12:00:00
 ---

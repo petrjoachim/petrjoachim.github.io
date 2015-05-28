@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title:  "Myšlenky z papíru"
 date:  2013-03-01 12:00:00
 ---

@@ -2,10 +2,11 @@
 layout: default
 title:
 ---
-{% for post in site.posts %}
-<div class="article-container">
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            {{post.content}}
-            <p class="small italic date_stamp light">Petr Joachim &mdash; {{post.date | | date: "%d.%m.%Y"}}</p>
-        </div>
-{% endfor %}
+
+<div id="landing">
+	<section>
+		<h1>Petr Joachim</h1>
+		<h2>minimalist freelance python developer</h2>
+		<!-- <h2>event manager at Barcamp Brno</h2> -->
+	</section>
+</div>

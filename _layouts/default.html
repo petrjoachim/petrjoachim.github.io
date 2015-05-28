@@ -4,66 +4,29 @@
 <html  xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <!-- meta tags -->
-        <meta name="viewport" content="width=device-width" />
-        <meta name="robots" content="index, follow" />
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="author" content="Petr Joachim / petr@joachim.cz" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="Petr Joachim / petr@joachim.cz" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width" />
 
-        <title>Petr Joachim {{ page.title }}</title>
+        <title>{{ page.title }}{% if page.title %} &mdash; {% endif %}Petr Joachim</title>
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
+        <!-- CSS -->
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="/css/syntax.css"> -->
         <link rel="stylesheet" href="/css/main.css">
+
+        <!-- Scripts -->
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/js/app.js"></script>
 
         <!-- RSS -->
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
     </head>
-    <body class="lifestyle">
-        <div id="center-wrapper">
-            <div id="title">
-                <h1 class="center"><a href="/">Petr Joachim</a></h1>
-                <h2 class="center">python &amp; minimalism</h2>
-            </div>
-            <div id="content">
-
-            {{ content }}
-
-            </div>
-
-            <div id="footer" class="center small light">
-                &copy; 2012 - 2015 &mdash; Petr Joachim 
-                <div id="contacts">
-                    <a href="mailto:petr@joachim.cz" title="e-mail me">
-                        <span class="entypo">&#9993;</span>
-                        petr@joachim.cz
-                    </a>
-                    <a href="/resume.html" title="want to see my online resume?">
-                        <span class="entypo">&#10078;</span>
-                        Résumé
-                    </a>
-                    <a href="/feed.xml">
-                        <span class="entypo">&#59194;</span>
-                        Blog RSS
-                    </a>
-                    <a href="https://github.com/petrjoachim">
-                        <span class="social">&#62208;</span>
-                        Github
-                    </a>
-                    <a href="http://cz.linkedin.com/in/petrjoachim/">
-                        <span class="social">&#62232;</span>
-                        LinkedIn
-                    </a>
-                    <a href="https://twitter.com/petrjoachim">
-                        <span class="social">&#62229;</span>
-                        Twitter
-                    </a>
-                </div>
-                &mdash; Entypo pictograms by Daniel Bruce (www.entypo.com)
-            </div>
-        </div>
+    <body {% if page.class %}class="{{page.class}}"{% endif %}>
+        {{ content }}
 
         <script type="text/javascript">
             // GOOGLE ANALYTICS CODE
@@ -77,6 +40,5 @@
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
         </script>
-
     </body>
 </html>

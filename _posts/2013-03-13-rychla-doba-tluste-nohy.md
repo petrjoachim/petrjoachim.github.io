@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title:  "Rychlá doba má tlusté nohy"
 date:   2013-03-13 12:00:00
 ---
