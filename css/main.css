@@ -1,13 +1,56 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,100);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300);
-@import url(http://fonts.googleapis.com/css?family=Crafty+Girls);
-@import url(http://fonts.googleapis.com/css?family=Allura);
 @import url(http://fonts.googleapis.com/css?family=Montez);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100);
+
+body {
+    font-family: 'OpenSans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans;
+    font-weight: 400;
+}
+
+/* SKILL SECTION */
+
+#skills {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#skills section {
+    padding: 20px 10px;
+    max-width: 500px;
+}
+
+#skills p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+#skills h2 {
+    padding-bottom: 15px;
+}
+
+#skills h2 small {
+    display: block;
+    font-weight: 100;
+}
+
+@media (min-width: 1200px) {
+    #skills section {
+        min-height: 320px;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+/* LANDING IMAGES */
 
 #landing {
+    /*display: none;*/
     width: 100%;
     background-repeat: no-repeat;
-    font-family: 'OpenSans', sans;
     position: relative;
     text-align: center;
     height: 500px;
@@ -20,7 +63,7 @@
 
 #landing section {
     background-color: black;
-    height: 250px;
+    height: 150px;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -28,10 +71,8 @@
 }
 
 #landing section h2 {
-    font-family: 'Raleway', sans;
     font-weight: 100;
     color: #ccc;
-    padding-top: 20px;
 }
 
 #landing section h1 {
@@ -40,13 +81,13 @@
 
 @media (min-height: 900px) {
     #landing {
-        height: 900px;
+        height: 850px;
     }
 }
 
 @media (min-height: 1100px) {
     #landing {
-        height: 1100px;
+        height: 1050px;
     }
 }
 
@@ -57,7 +98,6 @@
 
     #landing section {
         opacity: 0.75;
-        height: 200px;
     }
 }
 
