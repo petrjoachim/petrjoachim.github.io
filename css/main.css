@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #skills section {
-    padding: 20px 10px;
+    padding-top: 20px;
     max-width: 500px;
 }
 
@@ -37,11 +37,30 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 100;
 }
 
+#skills ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#skills li {
+    text-align: left;
+    font-size: 18px;
+}
+
 @media (min-width: 1200px) {
     #skills section {
         min-height: 320px;
+        width: 500px;
         display: inline-block;
         vertical-align: top;
+    }
+
+    #skills section:nth-child(odd) {
+        padding-right: 30px;
+    }
+
+    #skills section:nth-child(even) {
+        padding-left: 30px;
     }
 }
 
@@ -125,4 +144,90 @@ h1, h2, h3, h4, h5, h6 {
     #landing {
         background-size: 34%;
     }
+}
+
+/* BLOG */
+.blog .container {
+    max-width: 720px;
+}
+
+.blog h1 {
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Montez', sans-serif;
+}
+
+.blog h1::before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-image: url('/img/lifestyle-square.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 480px) {
+    .blog h1::before {
+        position: absolute;
+    }
+    .blog h2 {
+        text-align: right;
+    }
+
+    .blog .meta {
+        text-align: right;
+    }
+}
+
+.blog h1 a:hover {
+    text-decoration: none;
+}
+
+.blog .meta {
+    font-style: italic;
+    margin-top: -0.7em;
+}
+
+.blog p {
+    text-align: justify;
+    line-height: 1.5em;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    padding-bottom: 2em;
+}
+
+.blog .article-container::after {
+    content: '';
+    display: block;
+    margin: 2em auto 3em auto;
+    width: 60%;
+    border-bottom: 1px solid #ccc;
+}
+
+.blog .article-container:last-child::after {
+    display: none;
+}
+
+.blog p.date_stamp {
+    text-align: right;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.blog .back {
+    text-align: right;
+}
+
+/* FOOTER */
+
+#footer {
+    max-width: 500px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding-top: 1em;
+    margin: 0 auto 1em auto;
 }

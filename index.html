@@ -14,26 +14,41 @@ title:
 <div class="container">
 	<nav id="skills">
 		<section>
-			<h2>Jsem konzultant <small>aplikací a webových řešení</small></h2>
-			<p>Navrhuji <strong>API</strong>, <strong>vymýšlím architekturu</strong> webové aplikace a hledám nedostatky a nabízím <strong>možnosti změny</strong> v již zaběhnutých řešeních. Umím zavést testování a pomáhám snižovat dopady technologického dluhu.</p>
+			<h2>Jsem konzultant <small>aplikací a&nbsp;webových řešení</small></h2>
+			<p>Navrhuji <strong>API</strong>, <strong>vymýšlím architekturu</strong> webové aplikace a&nbsp;hledám nedostatky nebo&nbsp;nabízím <strong>možnosti změny</strong> v&nbsp;již&nbsp;zaběhnutých řešeních. Umím zavést testování a&nbsp;pomáhám snižovat dopady technologického dluhu.</p>
 		</section>
 		<section>
-			<h2>Jsem odborník <small>a stále se dovzdělávám</small></h2>
-			<p>Pracuji převážně v jazyce <strong>Python</strong>, ale mám bohaté zkušenosti i v <strong>PHP</strong> a <strong>JavaScriptu</strong>. Znám se s velkou škálou běžně i okrajově používaných technologií od <strong>Node.js</strong> přes různé databázové enginy jako MySQL, Redis, Elastic, Mongo a další. Vím jak řešit škálovatelnost a aplikace velkého rozsahu.</p>
+			<h2>Jsem odborník <small>a&nbsp;stále se&nbsp;dovzdělávám</small></h2>
+			<p>Pracuji převážně v&nbsp;jazyce <strong>Python</strong>, ale&nbsp;mám bohaté zkušenosti i&nbsp;v&nbsp;<strong>PHP</strong> a&nbsp;<strong>JavaScriptu</strong>. Znám se&nbsp;s&nbsp;velkou škálou běžně i&nbsp;okrajově používaných technologií od&nbsp;<strong>Node.js</strong> přes&nbsp;různé databázové enginy jako&nbsp;MySQL, Redis, Elastic, Mongo a&nbsp;další. Vím&nbsp;jak řešit škálovatelnost a&nbsp;aplikace velkého rozsahu.</p>
 		</section>
 		<section>
-			<h2>Jsem leader <small>v jednáních i v práci</small></h2>
-			<p>Mám zkušenosti s vedením menších i středních týmů a solidní manažerské povědomí. Mám velký přesah i mimo oblast IT, orientuji se v byznyse, navrhování procesů a podobně. Umím vysvětlit technická řešení i své babičce a mimo jiné dokončuji formální vzdělání v oboru psychologie.</p>
+			<h2>Jsem leader <small>v jednáních i&nbsp;v&nbsp;práci</small></h2>
+			<p>Mám zkušenosti s&nbsp;vedením menších i&nbsp;středních týmů a&nbsp;solidní manažerské povědomí. Mám velký přesah i&nbsp;mimo oblast IT, orientuji&nbsp;se v&nbsp;byznyse, navrhování procesů a&nbsp;podobně. Umím vysvětlit technická řešení i&nbsp;své babičce a&nbsp;mimo&nbsp;jiné dokončuji formální vzdělání v&nbsp;oboru psychologie.</p>
 		</section>
 		<section>
 			<h2>Dělám dobré věci <small>nejen pro sebe, ale i pro druhé</small></h2>
-			<p>Několik let organizuji <a href="http://www.barcampbrno.cz/">Barcamp Brno</a>, setkání svého druhu největší v ČR, kterého se zúčastnilo až 1500 lidí. Pomáhám tím lidem načerpat nové zkušenosti a vzájemně propojit kontakty. Dále mě můžete potkat na akcích <a href="http://python.cz">@naPyvo</a> a dalších komunitních akcích v Brně.</p>
+			<p>Několik let organizuji <a href="http://www.barcampbrno.cz/">Barcamp&nbsp;Brno</a>, setkání svého druhu největší&nbsp;v&nbsp;ČR, kterého se&nbsp;zúčastnilo až&nbsp;1500&nbsp;lidí. Pomáhám tím lidem načerpat nové zkušenosti a&nbsp;vzájemně propojit kontakty. Dále&nbsp;mě&nbsp;můžete potkat na&nbsp;akcích <a href="http://python.cz">@naPyvo</a> a&nbsp;dalších komunitních akcích v&nbsp;Brně.</p>
+		</section>
+		<section id="blog">
+			<h2>Píši o věcech <small>které mě zajímají</small></h2>
+			<ul>
+				{% for post in site.posts limit:3 %}
+					<li><a href="{{post.url}}">{{post.title}}</a> - <em>{{post.date | date: "%d.%m.%Y"}}</em> </li>
+				{% endfor %}
+				<li>a další <a href="/blog/">na blogu</a></li>
+			</ul>
+		</section>
+		<section id="contacts">
+			<h2>Jsem k dispozici <small>klidně mi napište</small></h2>
+			<ul>
+				<li><a href="mailto:petr@joachim.cz"><i class="fa fa-envelope-o"></i> petr@joachim.cz</a></li>
+				<li>Jsem&nbsp;z&nbsp;Brna, potkejte&nbsp;mě, třeba&nbsp;v&nbsp;Impact&nbsp;Hubu</li>
+				<li>IČ: 02713331 (nejsem&nbsp;plátcem&nbsp;DPH)</li>
+				<li><a href="https://github.com/petrjoachim"><i class="fa fa-github"></i>&nbsp;GitHub</a></li>
+				<li><a href="https://twitter.com/petrjoachim"><i class="fa fa-twitter"></i>&nbsp;@petrjoachim</a></li>
+				<li><a href="https://cz.linkedin.com/in/petrjoachim"><i class="fa fa-linkedin"></i>&nbsp;LinkedIn</a></li>
+			</ul>
 		</section>
 	</nav>
-	<nav id="references">
-		
-	</nav>
-	<nav id="contacts">
-
-	</nav>
+	<nav id="references"></nav>
 </div>
