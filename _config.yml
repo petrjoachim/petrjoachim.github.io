@@ -1,5 +1,5 @@
 name: Petr Joachim
 markdown: redcarpet
-highlighter: true
+highlighter: pygments
 url: http://petr.joachim.cz
 description: Personal website of Petr Joachim.
