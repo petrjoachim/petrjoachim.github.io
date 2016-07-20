@@ -262,6 +262,24 @@ $(document).keydown(function(e){
    }
 });
 
+var pusher = new Pusher('57cad681aa44cad36271', {
+  cluster: 'eu'
+});
+
+var button_type = ""
+if (window.location.hash) {
+   button_type = "-" + window.location.hash.replace('#', '');
+
+}
+var button = pusher.subscribe('button' + button_type);
+button.bind('press', function(data) {
+   if(!replayclickable)
+      screenClick();
+   else
+      replayIt();
+   
+});
+
 //Handle mouse down OR touch start
 if("ontouchstart" in window)
    $(document).on("touchstart", screenClick);
@@ -435,7 +453,11 @@ $("#replay").click(function() {
    if(!replayclickable)
       return;
    else
-      replayclickable = false;
+      replayIt();
+});
+
+function replayIt(){
+   replayclickable = false;
    //SWOOSH!
    soundSwoosh.stop();
    soundSwoosh.play();
@@ -448,7 +470,7 @@ $("#replay").click(function() {
       //start the game over!
       showSplash();
    });
-});
+}
 
 function playerScore()
 {
