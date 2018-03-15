@@ -6,6 +6,6 @@ title:
 <div class="article-container">
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
             {{post.content}}
-            <p class="small italic date_stamp light">Petr Joachim &mdash; {{post.date | | date: "%d.%m.%Y"}}</p>
+            <p class="small italic date_stamp light">Petr Joachim &mdash; {{post.date | date: "%d.%m.%Y"}}</p>
         </div>
 {% endfor %}
