@@ -243,13 +243,13 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 720px;
 }
 
-#resume h1 {
+h1.heading {
     font-size: 48px;
     text-align: center;
     font-family: 'Montez', sans-serif;
 }
 
-#resume h1::after {
+h1.heading::after {
     content: '';
     display: block;
     margin: 0 auto;
@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 480px) {
-    #resume h1::after {
+    h1.heading::after {
         /*position: absolute;*/
         display: inline-block;
         margin-left: 30px;
@@ -271,12 +271,9 @@ h1, h2, h3, h4, h5, h6 {
     #resume .meta {
         text-align: right;
     }
-
-    #resume h1 {
-    }
 }
 
-#resume h1 a:hover {
+h1.heading a:hover {
     text-decoration: none;
 }
 
