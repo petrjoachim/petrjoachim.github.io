@@ -1,44 +1,89 @@
-<?xml version="1.0" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html  xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <!-- meta tags -->
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="author" content="Petr Joachim / petr@joachim.cz" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
 
-        <title>{{ page.title }}{% if page.title %} &mdash; {% endif %}Petr Joachim</title>
+    <title>Petr Joachim</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Free Template by Free-Template.co" />
+    <meta name="keywords" content="free bootstrap 4, free bootstrap 4 template, free website templates, free html5, free template, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="Free-Template.co" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css"> -->
-        <link rel="stylesheet" href="/css/main.css?3">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
+    
+    {{content}}
 
-        <!-- RSS -->
-        <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-    </head>
-    <body {% if page.class %}class="{{page.class}}"{% endif %}>
-        {{ content }}
-        <div id="footer" class="container">
-            &copy; 2012 - 2018 &mdash; Petr&nbsp;Joachim &mdash;
-            <a href="mailto:petr@joachim.cz" title="e-mail me">petr@joachim.cz</a> &mdash; 
-            <a href="/resume.html" title="more about me">Resumė</a>
+    <footer class="ftco-footer ftco-bg-dark">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md col-md-4">
+                <div class="ftco-footer-widget mb-4">
+                  <h2 class="ftco-heading-2">Contacts</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="mailto:petr@joachim.cz" class="py-2 d-block">petr@joachim.cz</a></li>
+                    <li><a href="tel:+42072443883" class="py-2 d-block">724 443 883</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md col-md-4">
+                 <div class="ftco-footer-widget mb-4">
+                  <h2 class="ftco-heading-2">Social profiles</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="https://www.linkedin.com/in/petrjoachim/" class="py-2 d-block">LinkedIn &mdash; petrjoachim</a></li>
+                    <li><a href="https://petrjoachim.tumblr.com/" class="py-2 d-block">tumblr.com &mdash; petrjoachim</a></li>
+                    <li><a href="https://medium.com/@petrjoachim" class="py-2 d-block">medium.com &mdash; @petrjoachim</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ftco-footer-widget mb-4">
+              <ul class="ftco-footer-social list-unstyled float-md-right float-lft">
+                <!-- <li><a href="#"><span class="icon-twitter"></span></a></li> -->
+                <li><a href="mailto:petr@joachim.cz"><span class="icon-mail"></span></a></li>
+                <li><a href="tel:+420724443883"><span class="icon-mobile"></span></a></li>
+                <li><a href="https://www.facebook.com/petr.joachim"><span class="icon-facebook"></span></a></li>
+                <li><a href="https://www.instagram.com/petrjoachim/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-md text-left">
+            <p>&copy; Petr Joachim 2012 &mdash; 2018. All Rights Reserved.  Made with <span class="icon-heart text-danger"></span>  by <a href="https://free-template.co/">Free-Template.co</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-        <script type="text/javascript">
-            // GOOGLE ANALYTICS CODE
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-35610474-1']);
-            _gaq.push(['_trackPageview']);
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#4586ff"/></svg></div>
 
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
-    </body>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    
+  </body>
 </html>
