@@ -18,8 +18,10 @@
 <div class="site-tags js-tags">
   <ul class="menu">
     <li>
+      {%- include snippets/get-locale-string.html key='SHOW_ALL' -%}
+      {%- assign _show_all_text = __return -%}
       <button type="button" class="button button--secondary button--pill tag-button tag-button--all" data-encode="">
-        Show All<div class="tag-button__count">{{ site.posts | size }}</div>
+        {{ _show_all_text }}<div class="tag-button__count">{{ site.posts | size }}</div>
       </button>
     </li>
     {%- for _tag in _tags -%}
