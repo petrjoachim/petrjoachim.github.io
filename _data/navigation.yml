@@ -1,0 +1,14 @@
+header:
+  - titles:
+      # @start locale config
+      en: &EN Archive
+      cs: &CS Archív
+      # @end locale config
+    url: /archive.html
+
+  - titles:
+      # @start locale config
+      en: &EN About
+      cs: &CS O mě
+      # @end locale config
+    url: /about.html

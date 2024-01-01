@@ -1,0 +1,53 @@
+# @start locale config
+## => English
+########################
+en: &EN
+  SUBSCRIBE: "Subscribe"
+  READMORE: "Read more"
+  SEARCH: "Search"
+  CANCEL: "Cancel"
+  VIEWS: "views"
+  LAST_UPDATED: "Last updated"
+  PREVIOUS: "PREVIOUS"
+  NEXT: "NEXT"
+  ARTICLE_DATE_FORMAT: "%b %d, %Y"
+  ARTICLE_LIST_DATE_FORMAT: "%b %d"
+  STATISTICS: "[POST_COUNT] post articles, [PAGE_COUNT] pages."
+  LICENSE_ANNOUNCE: "This work is licensed under a [LICENSE] license."
+  POST_ON_GITHUB: "Edit on Github"
+  FOLLOW_ME: "Follow me on [NAME]."
+  FOLLOW_US: "Follow us on [NAME]."
+  EMAIL_ME: "Send me an Email."
+  EMAIL_US: "Send us an Email."
+  COPYRIGHT_DATES: "2024"
+  SHOW_ALL: "Show all"
+
+en-GB:
+  <<: *EN
+en-US:
+  <<: *EN
+en-CA:
+  <<: *EN
+en-AU:
+  <<: *EN
+
+cs: &CS
+  SUBSCRIBE: "Odebírat"
+  READMORE: "Pokračovat ve čtení"
+  SEARCH: "Hledat"
+  CANCEL: "Zrušit"
+  VIEWS: "shlédnutí"
+  LAST_UPDATED: "Aktualizováno"
+  PREVIOUS: "PŘEDCHOZÍ"
+  NEXT: "DALŠÍ"
+  ARTICLE_DATE_FORMAT: "%d. %m. %Y"
+  ARTICLE_LIST_DATE_FORMAT: "%d.%m."
+  STATISTICS: "[POST_COUNT] článků, [PAGE_COUNT] stran."
+  LICENSE_ANNOUNCE: "Tento obsah je licencován pod licencí [LICENSE]."
+  POST_ON_GITHUB: "Upravit na Githubu"
+  FOLLOW_ME: "Sledujte mě na [NAME]."
+  FOLLOW_US: "Sledujte nás na [NAME]."
+  EMAIL_ME: "Pošlete mi email."
+  EMAIL_US: "Pošlete nám email."
+  COPYRIGHT_DATES: "2024"
+  SHOW_ALL: "Všechno"
