@@ -1,0 +1,42 @@
+# Ways to work together. Shown as cards on the homepage and used on each
+# offer's page.
+#
+# price_teaser: always shown on the offer's page when filled in.
+# prices: full price list, shown only when `offers.show_prices: true`
+#         in _config.yml. Example:
+#   prices:
+#     - name: 6 sessions
+#       price: €1,200
+
+- id: coaching
+  title: Coaching
+  eyebrow: 1:1 for engineering leaders
+  summary: >-
+    Packages of 6–10 sessions for team leads, engineering managers,
+    directors and first-time CTOs and VPs of Engineering.
+  url: /coaching/
+  link_text: About coaching
+  price_teaser: Packages from €1,200
+  prices: []
+
+- id: advisory
+  title: Advisory retainer
+  eyebrow: Monthly, for founders and CEOs
+  summary: >-
+    Regular sparring on engineering, team and delivery questions, with
+    sessions plus async access in between.
+  url: /fractional-cto/#advisory
+  link_text: About advisory
+  price_teaser: ""
+  prices: []
+
+- id: fractional
+  title: Fractional CTO
+  eyebrow: 1–2 days a week
+  summary: >-
+    Part-time CTO or VP of Engineering for companies between hires or
+    scaling fast.
+  url: /fractional-cto/#fractional
+  link_text: About fractional CTO
+  price_teaser: ""
+  prices: []

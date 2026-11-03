@@ -1,24 +1,87 @@
 ---
-layout: articles
-titles:
-  # @start locale config
-  en      : &EN       Home
-  cs      : &CS       Začátek
-  # @end locale config
-show_title: false
-articles:
-  data_source: paginator.posts
-  article_type: BlogPosting
-  show_cover: false
-  show_excerpt: true
-  show_readmore: true
-  show_info: true
+layout: default
 ---
-<div class="layout--home">
-  {%- include paginator.html -%}
-</div>
-<script>
-  {%- include scripts/home.js -%}
-</script>
+<section class="hero">
+  <div class="container">
+    <h1>{{ page.hero.headline }}</h1>
+    <p class="lead">{{ page.hero.subline }}</p>
+    <div class="actions">
+      {% include cta.html %}
+      <a class="link-arrow" href="{{ page.hero.secondary_url | relative_url }}">{{ page.hero.secondary_text }}</a>
+    </div>
+  </div>
+</section>
 
-{{ content }}
+<section class="section section--alt" aria-label="Track record">
+  <div class="container">
+    <ul class="proof">
+      {%- for point in site.data.proof_points %}
+      <li class="proof__item"><span class="proof__value">{{ point.value }}</span><span class="proof__label">{{ point.label }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="audiences-heading">
+  <div class="container">
+    <h2 id="audiences-heading" class="section__header">{{ page.audiences.heading }}</h2>
+    <div class="grid">
+      {%- for item in page.audiences.items %}
+      {% include card.html title=item.title text=item.text %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="offers-heading">
+  <div class="container">
+    <h2 id="offers-heading" class="section__header">{{ page.offers_heading }}</h2>
+    <div class="grid">
+      {%- for offer in site.data.offers %}
+      {% include card.html eyebrow=offer.eyebrow title=offer.title text=offer.summary url=offer.url link_text=offer.link_text %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="steps-heading">
+  <div class="container">
+    <h2 id="steps-heading" class="section__header">{{ page.steps.heading }}</h2>
+    <ol class="steps">
+      {%- for step in page.steps.items %}
+      <li class="steps__item"><h3>{{ step.title }}</h3><p>{{ step.text }}</p></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+{%- if site.data.testimonials.size > 0 %}
+<section class="section section--alt" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <h2 id="testimonials-heading" class="section__header">{{ page.testimonials_heading }}</h2>
+    <div class="grid{% if site.data.testimonials.size == 2 %} grid--2{% endif %}">
+      {%- for t in site.data.testimonials limit: 3 %}
+      <figure class="testimonial">
+        <blockquote>{{ t.quote | markdownify }}</blockquote>
+        <figcaption><span class="testimonial__name">{{ t.name }}</span><span class="testimonial__role">{{ t.role }}</span></figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="{% if site.author.photo != '' %}media{% endif %}">
+      {% include photo.html lazy=true %}
+      <div>
+        <h2 id="about-heading">{{ page.about.heading }}</h2>
+        {{ page.about.text | markdownify }}
+        <a class="link-arrow" href="{{ '/about/' | relative_url }}">{{ page.about.link_text }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include cta.html variant="block" %}

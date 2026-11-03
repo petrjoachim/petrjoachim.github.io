@@ -1,0 +1,70 @@
+// Design tokens. Every color, size and spacing value lives here.
+// Dark mode redefines the same color tokens.
+
+:root {
+  // Colors (light)
+  --color-bg: #faf8f4;
+  --color-surface: #f2eee6;
+  --color-ink: #1c1b19;
+  --color-muted: #57534e;
+  --color-border: #ddd6ca;
+  --color-accent: #0f5e5c;
+  --color-accent-hover: #0b4a48;
+  --color-on-accent: #ffffff;
+  --color-focus: #0f5e5c;
+
+  // Fonts
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  // Type scale (18px base)
+  --text-sm: 0.889rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.333rem;
+  --text-xl: 1.6rem;
+  --text-2xl: 2rem;
+  --text-3xl: clamp(2.2rem, 5vw + 1rem, 3.4rem);
+  --leading-body: 1.6;
+  --leading-heading: 1.2;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  // Spacing
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+  --space-8: 6rem;
+
+  // Layout
+  --measure: 68ch;
+  --container-max: 1100px;
+  --container-pad: clamp(1rem, 4vw, 1.5rem);
+  --radius: 6px;
+  --focus-ring: 3px solid var(--color-focus);
+  --transition: 150ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #161513;
+    --color-surface: #201f1c;
+    --color-ink: #ece8e1;
+    --color-muted: #a8a29e;
+    --color-border: #3a3733;
+    --color-accent: #5ec4bc;
+    --color-accent-hover: #7fd3cc;
+    --color-on-accent: #161513;
+    --color-focus: #5ec4bc;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition: 0ms;
+  }
+}

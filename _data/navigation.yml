@@ -1,14 +1,14 @@
-header:
-  - titles:
-      # @start locale config
-      en: &EN Archive
-      cs: &CS Archív
-      # @end locale config
-    url: /archive.html
+# Header menu. `requires` hides an item until that feature flag in
+# _config.yml is enabled. The "Book a call" button is always shown.
+main:
+  - title: Coaching
+    url: /coaching/
+  - title: Fractional CTO
+    url: /fractional-cto/
+  - title: About
+    url: /about/
+  - title: Writing
+    url: /writing/
+    requires: writing
 
-  - titles:
-      # @start locale config
-      en: &EN About
-      cs: &CS O mě
-      # @end locale config
-    url: /about.html
+cta_label: Book a call

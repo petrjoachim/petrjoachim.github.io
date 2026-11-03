@@ -1,0 +1,12 @@
+{%- comment -%}
+  Petr's portrait from site.author.photo (JPG) with a WebP next to it.
+  Renders nothing while no photo is configured.
+  Usage: {% include photo.html lazy=true %}
+{%- endcomment -%}
+{%- if site.author.photo != "" -%}
+{%- assign photo_webp = site.author.photo | replace: ".jpg", ".webp" -%}
+<picture>
+  <source srcset="{{ photo_webp | relative_url }}" type="image/webp">
+  <img class="media__img" src="{{ site.author.photo | relative_url }}" alt="Portrait of {{ site.author.name }}" width="{{ site.author.photo_width }}" height="{{ site.author.photo_height }}"{% if include.lazy %} loading="lazy"{% endif %}>
+</picture>
+{%- endif -%}

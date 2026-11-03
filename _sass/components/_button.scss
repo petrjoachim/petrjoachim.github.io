@@ -1,0 +1,66 @@
+// One primary button, reserved for "Book a free intro call".
+// Every other action is a text link (.link-arrow).
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius);
+  color: var(--color-on-accent);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color var(--transition),
+    border-color var(--transition);
+
+  &:hover {
+    background: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    color: var(--color-on-accent);
+  }
+
+  &:focus-visible {
+    outline-offset: 3px;
+  }
+}
+
+.button--small {
+  min-height: 44px;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.link-arrow {
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+
+  &::after {
+    content: " →";
+    display: inline-block;
+    margin-left: 0.15em;
+    transition: transform var(--transition);
+  }
+
+  &:hover {
+    text-decoration: underline;
+
+    &::after {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+}

@@ -1,0 +1,15 @@
+{%- comment -%}
+  Career timeline from _data/career.yml. Usage: {% include timeline.html %}
+{%- endcomment -%}
+<ol class="timeline">
+  {%- for job in site.data.career %}
+  <li class="timeline__item">
+    <p class="timeline__meta">{{ job.period }}</p>
+    <h3>{{ job.role }}</h3>
+    <p class="timeline__meta">{{ job.org }}</p>
+    {%- if job.summary %}
+    <p>{{ job.summary }}</p>
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ol>

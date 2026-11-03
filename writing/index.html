@@ -1,0 +1,32 @@
+---
+layout: default
+title: Writing
+description: Articles on engineering leadership, coaching and building teams that ship.
+permalink: /writing/
+---
+
+<section class="section page-header">
+  <div class="container">
+    <h1>Writing</h1>
+    <p class="lead">Notes on engineering leadership, coaching and building teams that ship.</p>
+  </div>
+</section>
+
+<div class="container">
+  <ul class="post-list">
+    {%- for post in site.posts %}
+    <li class="post-list__item">
+      <p class="timeline__meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+        · {% include reading-time.html content=post.content %}
+      </p>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      {%- if post.description %}
+      <p class="muted">{{ post.description }}</p>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</div>
+
+{% include cta.html variant="block" %}

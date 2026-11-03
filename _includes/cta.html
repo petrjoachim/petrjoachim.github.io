@@ -1,0 +1,23 @@
+{%- comment -%}
+  The "Book a free intro call" button. Always links to /contact/.
+  Usage:
+    {% include cta.html %}                      button only
+    {% include cta.html size="small" %}         compact button (header)
+    {% include cta.html variant="block" %}      full-width closing section
+  Optional: label, heading, text (defaults in _data/cta.yml).
+  Clicks are counted as the "book-intro-call" analytics event.
+{%- endcomment -%}
+{%- capture cta_button -%}
+<a class="button{% if include.size == 'small' %} button--small{% endif %}" href="{{ '/contact/' | relative_url }}" data-goatcounter-click="book-intro-call">{{ include.label | default: site.data.cta.label }}</a>
+{%- endcapture -%}
+{%- if include.variant == "block" -%}
+<section class="cta-block" aria-labelledby="cta-heading">
+  <div class="container cta-block__inner">
+    <h2 id="cta-heading">{{ include.heading | default: site.data.cta.heading }}</h2>
+    <p>{{ include.text | default: site.data.cta.text }}</p>
+    {{ cta_button }}
+  </div>
+</section>
+{%- else -%}
+{{ cta_button }}
+{%- endif -%}

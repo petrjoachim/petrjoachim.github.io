@@ -1,0 +1,20 @@
+{%- comment -%}
+  Card for audiences and offers. With `url`, the whole card is clickable.
+  Usage: {% include card.html title="Coaching" text="..." url="/coaching/" link_text="About coaching" eyebrow="1:1" %}
+{%- endcomment -%}
+<article class="card{% if include.url %} card--link{% endif %}">
+  {%- if include.eyebrow %}
+  <p class="eyebrow">{{ include.eyebrow }}</p>
+  {%- endif %}
+  <h3 class="card__title">
+    {%- if include.url -%}
+    <a href="{{ include.url | relative_url }}">{{ include.title }}</a>
+    {%- else -%}
+    {{ include.title }}
+    {%- endif -%}
+  </h3>
+  <p>{{ include.text }}</p>
+  {%- if include.url %}
+  <p class="card__more" aria-hidden="true">{{ include.link_text | default: "Learn more" }}</p>
+  {%- endif %}
+</article>

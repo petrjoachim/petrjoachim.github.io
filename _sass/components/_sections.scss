@@ -1,0 +1,344 @@
+// Content blocks used by the homepage and inner pages.
+@use "../mixins" as *;
+
+// Hero
+.hero {
+  padding-block: var(--space-7);
+
+  @include md {
+    padding-block: var(--space-8) var(--space-7);
+  }
+
+  h1 {
+    max-width: 20ch;
+  }
+
+  .lead {
+    margin-bottom: var(--space-5);
+  }
+}
+
+// Proof strip
+.proof {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include md {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.proof__item {
+  padding-top: var(--space-3);
+  border-top: 2px solid var(--color-accent);
+}
+
+.proof__value {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-heading);
+}
+
+.proof__label {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+// Numbered steps
+.steps {
+  display: grid;
+  gap: var(--space-5);
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+
+  @include md {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.steps__item {
+  counter-increment: step;
+
+  &::before {
+    content: counter(step);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: var(--space-3);
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    color: var(--color-accent);
+    font-family: var(--font-serif);
+    font-weight: var(--weight-semibold);
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+  }
+
+  p {
+    color: var(--color-muted);
+  }
+}
+
+// Testimonial
+.testimonial {
+  margin: 0;
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--color-accent);
+
+  blockquote {
+    margin: 0 0 var(--space-3);
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    line-height: 1.5;
+
+    p {
+      margin-bottom: var(--space-3);
+    }
+  }
+
+  figcaption {
+    font-size: var(--text-sm);
+  }
+}
+
+.testimonial__name {
+  display: block;
+  font-weight: var(--weight-semibold);
+}
+
+.testimonial__role {
+  display: block;
+  color: var(--color-muted);
+}
+
+// Photo + text
+.media {
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+
+  @include md {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: var(--space-6);
+  }
+}
+
+.media__img {
+  width: 100%;
+  border-radius: var(--radius);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: var(--color-border);
+}
+
+// Career timeline
+.timeline {
+  max-width: var(--measure);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline__item {
+  position: relative;
+  padding: 0 0 var(--space-5) var(--space-5);
+  border-left: 2px solid var(--color-border);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.45em;
+    left: -7px;
+    width: 12px;
+    height: 12px;
+    background: var(--color-bg);
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    border-left-color: transparent;
+  }
+
+  h3 {
+    margin-block: 0 var(--space-1);
+    font-size: var(--text-lg);
+  }
+
+  p {
+    margin-bottom: var(--space-1);
+  }
+}
+
+.timeline__meta {
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+// FAQ
+.faq {
+  max-width: var(--measure);
+  border-top: 1px solid var(--color-border);
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--color-border);
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding-block: var(--space-3);
+    font-weight: var(--weight-semibold);
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "+";
+      color: var(--color-accent);
+      font-size: var(--text-lg);
+      line-height: 1;
+    }
+  }
+
+  &[open] summary::after {
+    content: "−";
+  }
+}
+
+.faq__answer {
+  padding-bottom: var(--space-3);
+  color: var(--color-muted);
+}
+
+// Price block (coaching page)
+.price {
+  max-width: var(--measure);
+  margin-block: var(--space-5);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+
+  p {
+    margin-bottom: var(--space-1);
+  }
+}
+
+.price__teaser {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+}
+
+.price__list {
+  margin-bottom: var(--space-3);
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding-block: var(--space-1);
+  }
+}
+
+.price__note {
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+// About page portrait
+.about-photo {
+  max-width: 320px;
+  margin-bottom: var(--space-5);
+}
+
+// Booking widget (contact page)
+.booking {
+  margin-bottom: var(--space-6);
+}
+
+.booking__embed {
+  min-height: 600px;
+  margin-bottom: var(--space-3);
+  overflow: auto;
+}
+
+.booking__fallback {
+  color: var(--color-muted);
+}
+
+// Writing index
+.post-list {
+  max-width: var(--measure);
+  margin: 0 0 var(--space-7);
+  padding: 0;
+  list-style: none;
+}
+
+.post-list__item {
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+
+  h2 {
+    margin-bottom: var(--space-2);
+    font-size: var(--text-xl);
+  }
+
+  h2 a {
+    color: var(--color-ink);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    margin-bottom: var(--space-1);
+  }
+}
+
+// Closing call to action
+.cta-block {
+  padding-block: var(--space-7);
+  background: var(--color-surface);
+  text-align: center;
+
+  @include md {
+    padding-block: var(--space-8);
+  }
+
+  p {
+    margin-inline: auto;
+    color: var(--color-muted);
+  }
+
+  .button {
+    margin-top: var(--space-2);
+  }
+}

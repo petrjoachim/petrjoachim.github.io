@@ -1,0 +1,211 @@
+---
+layout: default
+title: Style guide
+description: Every component of the site design in one place.
+permalink: /styleguide/
+sitemap: false
+noindex: true
+---
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Internal</p>
+    <h1>Style guide</h1>
+    <p class="lead">Every component used on the site. Not linked from the menu and not indexed by search engines.</p>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="sg-colors">
+  <div class="container">
+    <h2 id="sg-colors">Colors</h2>
+    <p class="muted">Defined in <code>_sass/_tokens.scss</code>. Switch your system to dark mode to see the dark set.</p>
+    <ul class="sg-swatches">
+      <li><span style="background: var(--color-bg)"></span>bg</li>
+      <li><span style="background: var(--color-surface)"></span>surface</li>
+      <li><span style="background: var(--color-ink)"></span>ink</li>
+      <li><span style="background: var(--color-muted)"></span>muted</li>
+      <li><span style="background: var(--color-border)"></span>border</li>
+      <li><span style="background: var(--color-accent)"></span>accent</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="sg-type">
+  <div class="container">
+    <p class="eyebrow">Eyebrow label</p>
+    <h1 id="sg-type">Heading 1, Source Serif 4</h1>
+    <h2>Heading 2 for page sections</h2>
+    <h3>Heading 3 for cards and sub-sections</h3>
+    <h4>Heading 4</h4>
+    <p class="lead">Lead paragraph. Engineering Leadership Coach &amp; Fractional CTO. Former CTO and VP of Engineering, coaching tech leaders since 2019.</p>
+    <p>Body text in Inter at 18px with a line height of 1.6, limited to about 68 characters per line so long paragraphs stay comfortable to read. It contains a <a href="#">text link</a>, some <strong>bold text</strong> and <em>emphasis</em>.</p>
+    <ul>
+      <li>Bulleted list item</li>
+      <li>Another item with a bit more text to show wrapping</li>
+    </ul>
+    <ol>
+      <li>Numbered list item</li>
+      <li>Second item</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="sg-buttons">
+  <div class="container">
+    <h2 id="sg-buttons">Buttons and links</h2>
+    <p class="muted">The filled button is used only for booking. Everything else is a text link.</p>
+    <div class="actions">
+      {% include cta.html %}
+      {% include cta.html size="small" label="Book a call" %}
+      <a class="link-arrow" href="#">Secondary action</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="sg-hero">
+  <div class="container">
+    <h2 id="sg-hero">Hero</h2>
+  </div>
+  <div class="hero">
+    <div class="container">
+      <h1>I help CTOs and engineering leaders build teams that ship</h1>
+      <p class="lead">Engineering Leadership Coach &amp; Fractional CTO. Former CTO and VP of Engineering, coaching tech leaders since 2019.</p>
+      <div class="actions">
+        {% include cta.html %}
+        <a class="link-arrow" href="#">How coaching works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="sg-proof">
+  <div class="container">
+    <h2 id="sg-proof" class="section__header">Proof strip</h2>
+    <ul class="proof">
+      <li class="proof__item"><span class="proof__value">60 → 450</span><span class="proof__label">developers at Kiwi.com, coached through the growth</span></li>
+      <li class="proof__item"><span class="proof__value">50 engineers</span><span class="proof__label">led at IP Fabric</span></li>
+      <li class="proof__item"><span class="proof__value">100 days → 1 week</span><span class="proof__label">release cycle</span></li>
+      <li class="proof__item"><span class="proof__value">Since 2019</span><span class="proof__label">coaching engineering leaders</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="sg-cards">
+  <div class="container">
+    <div class="section__header">
+      <h2 id="sg-cards">Cards</h2>
+      <p class="muted">Linked cards are clickable as a whole. Plain cards have no link.</p>
+    </div>
+    <div class="grid">
+      {% include card.html eyebrow="1:1" title="Coaching" text="Packages of 6–10 sessions for engineering managers, directors, CTOs and VPs of Engineering." url="#" link_text="About coaching" %}
+      {% include card.html eyebrow="Monthly" title="Advisory retainer" text="Regular sparring for founders and CEOs, with sessions and async access in between." url="#" link_text="About advisory" %}
+      {% include card.html eyebrow="1–2 days a week" title="Fractional CTO" text="Senior technology leadership for companies between hires or scaling fast." url="#" link_text="About fractional CTO" %}
+    </div>
+    <div class="grid" style="margin-top: var(--space-4)">
+      {% include card.html title="CTOs and VPs of Engineering" text="At Series A–C scaleups, growing into a bigger role while the team keeps growing." %}
+      {% include card.html title="Founders and CEOs" text="Who need senior tech leadership without a full-time hire." %}
+      {% include card.html title="HR and L&amp;D leads" text="Buying coaching for their engineering managers." %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="sg-steps">
+  <div class="container">
+    <h2 id="sg-steps" class="section__header">Steps</h2>
+    <ol class="steps">
+      <li class="steps__item"><h3>Free 30-minute intro call</h3><p>We talk about your situation and whether I'm the right fit.</p></li>
+      <li class="steps__item"><h3>Agreed goals and format</h3><p>We set what you want to change and how we'll work.</p></li>
+      <li class="steps__item"><h3>Regular sessions</h3><p>Usually every two to three weeks, remote or in person.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="sg-testimonials">
+  <div class="container">
+    <h2 id="sg-testimonials" class="section__header">Testimonials</h2>
+    <div class="grid grid--2">
+      <figure class="testimonial">
+        <blockquote><p>Placeholder quote. Real testimonials come from LinkedIn recommendations, with each person's permission.</p></blockquote>
+        <figcaption><span class="testimonial__name">Name Surname</span><span class="testimonial__role">VP of Engineering, Company</span></figcaption>
+      </figure>
+      <figure class="testimonial">
+        <blockquote><p>A second placeholder quote, a little longer, to show how the text wraps over several lines in the two-column layout.</p></blockquote>
+        <figcaption><span class="testimonial__name">Name Surname</span><span class="testimonial__role">CTO, Company</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="sg-media">
+  <div class="container">
+    <h2 id="sg-media" class="section__header">Photo and text</h2>
+    <div class="media">
+      <div class="media__img" role="img" aria-label="Photo placeholder"></div>
+      <div>
+        <h3>About teaser</h3>
+        <p>Two sentences about Petr: from developer at Seznam.cz to full-time leadership coach at Kiwi.com, then CTO, VP of Engineering and Director of Product Engineering.</p>
+        <a class="link-arrow" href="#">More about me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="sg-timeline">
+  <div class="container">
+    <h2 id="sg-timeline" class="section__header">Career timeline</h2>
+    <ol class="timeline">
+      <li class="timeline__item">
+        <p class="timeline__meta">Placeholder dates</p>
+        <h3>Director of Product Engineering</h3>
+        <p class="timeline__meta">IP Fabric</p>
+        <p>One or two lines on the role and its results.</p>
+      </li>
+      <li class="timeline__item">
+        <p class="timeline__meta">Placeholder dates</p>
+        <h3>VP of Engineering</h3>
+        <p class="timeline__meta">ThreatMark</p>
+        <p>One or two lines on the role and its results.</p>
+      </li>
+      <li class="timeline__item">
+        <p class="timeline__meta">Placeholder dates</p>
+        <h3>CTO</h3>
+        <p class="timeline__meta">Moravio</p>
+        <p>One or two lines on the role and its results.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="sg-faq">
+  <div class="container">
+    <h2 id="sg-faq" class="section__header">FAQ</h2>
+    <div class="faq">
+      <details class="faq__item">
+        <summary>Is what we discuss confidential?</summary>
+        <div class="faq__answer"><p>Placeholder answer.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>Can my company pay for the coaching?</summary>
+        <div class="faq__answer"><p>Placeholder answer.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>What if I need to cancel a session?</summary>
+        <div class="faq__answer"><p>Placeholder answer.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="sg-cta">
+  <div class="container">
+    <h2 id="sg-cta">Closing call to action</h2>
+    <p class="muted">Shown at the end of every page with <code>{% raw %}{% include cta.html variant="block" %}{% endraw %}</code>.</p>
+  </div>
+</section>
+
+{% include cta.html variant="block" %}
+
+<style>
+  .sg-swatches { display: flex; flex-wrap: wrap; gap: var(--space-4); max-width: none; padding: 0; list-style: none; font-size: var(--text-sm); }
+  .sg-swatches span { display: block; width: 5rem; height: 3.5rem; margin-bottom: var(--space-1); border: 1px solid var(--color-border); border-radius: var(--radius); }
+</style>

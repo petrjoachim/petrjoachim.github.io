@@ -1,89 +1,117 @@
-# [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
+# petr.joachim.cz
 
-[![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
-[![Gem Version](https://img.shields.io/gem/v/jekyll-text-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
-[![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
-[![Tip Me via PayPal](https://img.shields.io/badge/PayPal-tip%20me-1462ab.svg?logo=paypal)](https://www.paypal.me/kitian616)
-[![Tip Me via Bitcoin](https://img.shields.io/badge/Bitcoin-tip%20me-f7931a.svg?logo=bitcoin)](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/3Fkufxcw2xd8HnaRJBNK4ccdtkUDyyNu4V.jpg)
+Personal site of Petr Joachim, built with Jekyll and served by GitHub Pages.
+The full spec is in [SPEC.md](SPEC.md).
 
-![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
+## Run locally
 
-![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-layouts.png)
+You need the Ruby version in `.ruby-version` and Bundler.
 
-TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-**[Change Log](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/CHANGELOG.md)** | **[中文](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README-zh.md)**
+Open http://localhost:4000. Pages reload when you save a file, except
+`_config.yml`: stop the server (Ctrl+C) and start it again after editing it.
 
-## Features
+## Where things live
 
-- Responsive
-- Semantic HTML
-- Skins
-- Highlight Theme
-- Internationalization
-- Search
-- Table of contents
-- Authors
-- Additional styles (alert, tag, image, icon, button, grid, etc)
-- Extensions (audios, videos, slides, demos)
-- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
-- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
-- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
-- Pageview ([LeanCloud](https://leancloud.cn/))
-- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
-- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
-
-## Skins
-
-TeXt has 6 built-in skins, you can also set up your own skin.
-
-| `default` | `dark` | `forest` |
-| --- |  --- | --- |
-| ![Default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_default.jpg) | ![Dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_dark.jpg) | ![Forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_forest.jpg) |
-
-| `ocean` | `chocolate` | `orange` |
-| --- |  --- | --- |
-| ![Ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.jpg) | ![Chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.jpg) | ![Orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.jpg) |
-
-### Highlight Theme
-
-TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highlight theme.
-
-| `tomorrow` | `tomorrow-night` | `tomorrow-night-eighties` | `tomorrow-night-blue` | `tomorrow-night-bright` |
-| --- |  --- | --- | --- |  --- |
-| ![Tomorrow](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow.png) | ![Tomorrow Night](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night.png) | ![Tomorrow Night Eighties](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-eighties.png) | ![Tomorrow Night Blue](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-blue.png) | ![Tomorrow Night Bright](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-bright.png) |
-
-## Documentation
-
-### Start
-
-- [Quick Start](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/quick-start)
-- [Update from 1.x to 2.x](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/update-from-1-to-2)
-
-### Customization
-
-- [Configuration](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/configuration)
-- [Navigation](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/navigation)
-- [Layouts](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/layouts)
-- [Logo and Favicon](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/logo-and-favicon)
-- [Authors](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/authors)
-- [Internationalization](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/i18n)
-
-### Content
-
-- [Writing Posts](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/writing-posts)
-- [Additional styles](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/additional-styles)
-- [Extensions](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/extensions)
-- [Markdown Enhancements](https://kitian616.github.io/jekyll-TeXt-theme/docs/en/markdown-enhancements)
-
-## Demo Pages
-
-| Name | Description |
+| What you want to change | Where |
 | --- | --- |
-| [Home](https://kitian616.github.io/jekyll-TeXt-theme/test/) | Home page |
-| [Archive](https://kitian616.github.io/jekyll-TeXt-theme/archive.html) | Archive page |
-| [Layout Examples](https://kitian616.github.io/jekyll-TeXt-theme/samples.html) | Examples for different layouts |
+| Site title, booking link, email, business details, feature flags | `_config.yml` |
+| Homepage text (hero, audiences, steps, about teaser) | front matter at the top of `index.md` |
+| Page text | `coaching.md`, `fractional-cto.md`, `about.md`, `contact.md`, `privacy.md` |
+| Lists (proof points, offers and prices, testimonials, career, coaching FAQ, menu, closing call to action) | `_data/*.yml` |
+| Photo, email, LinkedIn, Cal.com link, IČO | `_config.yml` |
+| Colors, fonts, spacing | `_sass/_tokens.scss` |
+| Photos | `assets/img/` (WebP + JPG, max 200 KB each) |
 
-## License
+Layouts (`_layouts/`), components (`_includes/`) and styles (`_sass/`) do not
+need to change when you edit text. Every component is shown at
+http://localhost:4000/styleguide/ (not linked or indexed).
 
-TeXt Theme is [MIT licensed](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE).
+## Edit text
+
+1. Open the page's `.md` file or the matching `_data/*.yml` file.
+2. Change the text. Keep the indentation in YAML files as it is.
+3. Check it locally with `bundle exec jekyll serve`.
+4. Commit and push to `master`. The site deploys in about a minute.
+
+## Add a testimonial
+
+Get the person's permission first. Then add an entry to
+`_data/testimonials.yml`:
+
+```yaml
+- quote: "What they said."
+  name: Jane Doe
+  role: CTO, Example Ltd
+```
+
+The homepage shows the testimonials section only when this file has entries.
+
+## Publish a post (once the writing section is on)
+
+1. Create `_posts/YYYY-MM-DD-short-title.md`:
+
+   ```markdown
+   ---
+   title: The post title
+   description: One sentence for search results and LinkedIn previews.
+   ---
+
+   Post text in Markdown.
+   ```
+
+2. Set `writing.enabled: true` in `_config.yml`. Until then the Writing
+   page, posts and their sitemap and feed entries are left out of the build
+   entirely (see `_plugins/writing_flag.rb`), so you can draft posts safely.
+3. Commit and push. Posts appear at `/writing/<title>/` with a reading time.
+
+## Quality checks
+
+Every pull request runs Lighthouse (`.github/workflows/lighthouse.yml`) on the
+core pages with mobile settings and fails if Performance, Accessibility, Best
+Practices or SEO drops below 95. You can also start it by hand from the
+Actions tab. Before launch, go through the launch checklist in `SPEC.md`.
+
+## Analytics
+
+The site uses cookieless [GoatCounter](https://www.goatcounter.com/). To turn
+it on, create a GoatCounter site, then in `_config.yml` set
+`analytics.enabled: true` and `analytics.goatcounter_code` to your site code
+(the `xyz` in `xyz.goatcounter.com`). The script only loads on the live
+site, not with `jekyll serve`. Clicks on "Book a free intro call" show up as
+the `book-intro-call` event. The privacy page updates itself when you turn
+analytics on.
+
+## Share image (LinkedIn preview)
+
+`assets/img/og-image.png` (1200×630) is made from `_design/og-image.svg`.
+After editing the SVG, regenerate the PNG on a Mac:
+
+```bash
+d=$(mktemp -d) && sed -e 's/width="1200" height="630" viewBox="0 0 1200 630"/width="768" height="768" viewBox="0 -285 1200 1200"/' _design/og-image.svg > "$d/og.svg" && qlmanage -t -s 1200 -o "$d" "$d/og.svg" && sips -c 630 1200 "$d/og.svg.png" --out assets/img/og-image.png
+```
+
+Check the result with LinkedIn's
+[Post Inspector](https://www.linkedin.com/post-inspector/) after deploying.
+
+## Redirects
+
+`/call/` and the old site's URLs redirect to the new pages. They are listed
+under `redirect_from:` at the top of `contact.md`, `about.md` and `index.md`.
+
+## Fonts
+
+Inter and Source Serif 4 are self-hosted in `assets/fonts/` (SIL Open Font
+License, see `OFL-*.txt`), so no request goes to Google Fonts.
+
+## Deployment
+
+`.github/workflows/pages.yml` builds the site on every push and pull request
+and deploys `master` to GitHub Pages. One-time setup in the GitHub repo:
+**Settings → Pages → Source: GitHub Actions**, custom domain
+`petr.joachim.cz`, **Enforce HTTPS** on. DNS: a `CNAME` record for
+`petr.joachim.cz` pointing to `petrjoachim.github.io`.

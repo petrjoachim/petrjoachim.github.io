@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#faf8f4"/>
+  <rect x="0" y="0" width="16" height="630" fill="#0f5e5c"/>
+  <text x="96" y="250" font-family="'Source Serif 4', Georgia, serif" font-weight="700" font-size="96" fill="#1c1b19">Petr Joachim</text>
+  <text x="96" y="336" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="44" fill="#0f5e5c">Engineering Leadership Coach &amp; Fractional CTO</text>
+  <text x="96" y="400" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="32" fill="#57534e">Former CTO and VP of Engineering,</text>
+  <text x="96" y="444" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="32" fill="#57534e">coaching tech leaders since 2019.</text>
+  <rect x="96" y="508" width="1008" height="2" fill="#ddd6ca"/>
+  <text x="96" y="562" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="28" fill="#1c1b19">petr.joachim.cz</text>
+</svg>

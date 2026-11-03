@@ -1,0 +1,6 @@
+{%- comment -%}
+  Estimated reading time at 200 words a minute.
+  Usage: {% include reading-time.html content=post.content %}
+{%- endcomment -%}
+{%- assign words = include.content | strip_html | number_of_words -%}
+{{- words | divided_by: 200 | at_least: 1 }} min read

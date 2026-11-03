@@ -1,0 +1,19 @@
+{%- comment -%}
+  Price block for one offer from _data/offers.yml.
+  Usage: {% include offer-price.html id="coaching" %}
+{%- endcomment -%}
+{%- assign offer = site.data.offers | where: "id", include.id | first -%}
+{%- if offer.price_teaser != "" or site.offers.show_prices and offer.prices.size > 0 %}
+<div class="price">
+  {%- if site.offers.show_prices and offer.prices.size > 0 %}
+  <ul class="price__list">
+    {%- for price in offer.prices %}
+    <li><span>{{ price.name }}</span> <strong>{{ price.price }}</strong></li>
+    {%- endfor %}
+  </ul>
+  {%- elsif offer.price_teaser != "" %}
+  <p class="price__teaser">{{ offer.price_teaser }}</p>
+  {%- endif %}
+  <p class="price__note">Final price depends on the number of sessions and who pays. We agree it after the intro call.</p>
+</div>
+{%- endif -%}

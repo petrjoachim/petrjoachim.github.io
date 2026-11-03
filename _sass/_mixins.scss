@@ -1,0 +1,21 @@
+// Breakpoints. Styles are mobile-first; these add rules for wider screens.
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+@mixin md {
+  @media (min-width: $bp-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $bp-lg) {
+    @content;
+  }
+}
+
+@mixin below-md {
+  @media (max-width: ($bp-md - 0.02px)) {
+    @content;
+  }
+}

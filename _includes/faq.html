@@ -1,0 +1,11 @@
+{%- comment -%}
+  FAQ list from a _data file. Usage: {% include faq.html items=site.data.faq_coaching %}
+{%- endcomment -%}
+<div class="faq">
+  {%- for item in include.items %}
+  <details class="faq__item">
+    <summary>{{ item.question }}</summary>
+    <div class="faq__answer">{{ item.answer | markdownify }}</div>
+  </details>
+  {%- endfor %}
+</div>

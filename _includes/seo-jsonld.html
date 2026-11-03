@@ -1,0 +1,54 @@
+{%- comment -%}
+  Structured data for search engines: Petr as a Person and his practice as a
+  ProfessionalService. Included on the homepage and the About page.
+{%- endcomment -%}
+{%- assign person_id = '/#person' | absolute_url -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ person_id | jsonify }},
+      "name": {{ site.author.name | jsonify }},
+      "jobTitle": {{ site.tagline | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      {%- if site.author.photo != "" %}
+      "image": {{ site.author.photo | absolute_url | jsonify }},
+      {%- endif %}
+      "sameAs": [{{ site.author.linkedin | jsonify }}],
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Masaryk University" },
+      "knowsLanguage": ["en", "cs", "sk"],
+      "address": { "@type": "PostalAddress", "addressLocality": "Brno", "addressCountry": "CZ" }
+    },
+    {
+      "@type": "ProfessionalService",
+      "name": {{ site.title | append: " — " | append: site.tagline | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "image": {{ '/assets/img/og-image.png' | absolute_url | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "founder": { "@id": {{ person_id | jsonify }} },
+      "areaServed": { "@type": "Place", "name": "Europe" },
+      "availableLanguage": ["English", "Czech", "Slovak"],
+      "address": { "@type": "PostalAddress", "addressLocality": "Brno", "addressCountry": "CZ" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {%- for offer in site.data.offers %}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": {{ offer.title | jsonify }},
+              "description": {{ offer.summary | strip | jsonify }},
+              "url": {{ offer.url | absolute_url | jsonify }}
+            }
+          }{% unless forloop.last %},{% endunless %}
+          {%- endfor %}
+        ]
+      }
+    }
+  ]
+}
+</script>

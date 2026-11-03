@@ -1,3 +1,20 @@
 ---
-layout: 404
+layout: default
+title: Page not found
+description: This page doesn't exist. Go to the homepage or book a free intro call.
+permalink: /404.html
+sitemap: false
+noindex: true
 ---
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">404</p>
+    <h1>This page doesn't exist</h1>
+    <p class="lead">The link may be old, or the page has moved since the site was redesigned.</p>
+    <div class="actions">
+      {% include cta.html %}
+      <a class="link-arrow" href="{{ '/' | relative_url }}">Go to the homepage</a>
+    </div>
+  </div>
+</section>

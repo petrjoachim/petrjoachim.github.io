@@ -1,0 +1,10 @@
+{%- comment -%}
+  Email link with "@" and "." written as HTML entities, so simple scrapers
+  that search the page source for addresses miss it.
+  Usage: {% include email.html %}
+{%- endcomment -%}
+{%- assign email_parts = site.author.email | split: "@" -%}
+{%- if email_parts.size == 2 -%}
+  {%- assign email_domain = email_parts[1] | replace: ".", "&#46;" -%}
+  <a href="mailto:{{ email_parts[0] }}&#64;{{ email_domain }}">{{ email_parts[0] }}&#64;{{ email_domain }}</a>
+{%- endif -%}
